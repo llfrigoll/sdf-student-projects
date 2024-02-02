@@ -13,11 +13,66 @@
 body {
     font-family: "Open Sans", Arial, sans-serif;
     min-height: 100vh;
-    background-color: #fafafa;
-    color: #262626;
+    background-color: black;
+    color: #fafafa;
     padding-bottom: 3rem;
+    margin: 20px 20px 20px 20px;
 }
 
 img {
     display: block;
+}
+
+.profile {
+    display: grid;
+    grid-template: repeat(3, auto) / repeat(4, 1fr);
+    grid-template-areas: 
+        'n n n n'
+        'pfp sc sc sc'
+        'b b b b';
+}
+
+.profile-user-settings {
+    grid-column: n;
+    order: -1;
+}
+
+.profile-image {
+    grid-area: pfp;
+}
+
+.profile-stats { 
+    grid-area: sc;   
+}
+
+.profile-stats-list {
+    display: grid;
+    grid-template: 271px / repeat(3, 1fr);
+    margin: 0;
+    align-items: center;
+}
+
+.profile-stat-count {
+    font-size: 20px;
+}
+
+.profile-bio {
+    grid-area: b;
+    font-size: 15px;
+}
+
+.btn {
+    background-color: dimgray;
+    border-color: dimgray;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: white;
+    transition: all 1s;
+}
+
+.btn:hover {
+    color: black;
+    background-color: white;
+    scale: 1.2;
+    border-color: white;
 }
